@@ -3,38 +3,54 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Datafólio - Educação e PIB nos Estados</title>
+    <title>Datafólio - 5 Perguntas sobre Educação e PIB</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f7f7f7; }
-        h1, h2 { color: #333366; }
-        img { max-width: 100%; height: auto; margin-bottom: 30px; }
-        .grafico { background-color: #fff; padding: 20px; margin-bottom: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f8f8f8; }
+        h1, h2 { color: #2c3e50; }
+        p { line-height: 1.6; }
+        .grafico { background: #fff; padding: 20px; margin-bottom: 40px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+        img { max-width: 100%; height: auto; display: block; margin: 15px auto; }
     </style>
 </head>
 <body>
-    <h1>Datafólio - Relação entre Educação e PIB nos Estados Brasileiros</h1>
-    <p>Este Datafólio apresenta uma análise da correlação entre variáveis educacionais — com foco nas matrículas privadas — e o Produto Interno Bruto dos estados brasileiros em 2021.</p>
 
-    <div class="grafico">
-        <h2>1. Matrículas Privadas e PIB por Estado</h2>
-        <p>Este gráfico mostra a quantidade de matrículas privadas por estado em comparação com o PIB estadual. Observa-se que estados como SP, RJ e MG apresentam altos valores em ambos os indicadores.</p>
-        <img src="df_bar_line.png" alt="Matrículas Privadas vs PIB">
-    </div>
+<h1>Datafólio - Investigando a Relação entre Educação e PIB nos Estados Brasileiros</h1>
+<p>Este Datafólio apresenta uma análise exploratória com base em cinco perguntas principais que buscam entender o perfil da educação no Brasil e sua relação com o Produto Interno Bruto (PIB) estadual em 2021.</p>
 
-    <div class="grafico">
-        <h2>2. Mapa de Correlação</h2>
-        <p>O mapa de calor abaixo mostra a correlação entre diferentes redes de ensino (pública, privada, federal, etc) e o PIB. As cores mais intensas indicam maior correlação.</p>
-        <img src="df_heatmap.png" alt="Mapa de Correlação">
-    </div>
+<div class="grafico">
+    <h2>1. Qual é o perfil das matrículas por rede de ensino no Brasil em 2021?</h2>
+    <p>As redes públicas (especialmente a municipal) concentram a maior parte das matrículas no Brasil. A rede privada, embora menor, possui maior presença em estados com maior poder aquisitivo.</p>
+    <img src="graf_pergunta_1.png" alt="Perfil das Matrículas por Rede de Ensino">
+</div>
 
-    <div class="grafico">
-        <h2>3. Correlação de Cada Rede com o PIB</h2>
-        <p>Neste gráfico de barras, vemos que a rede privada é a que apresenta maior correlação com o PIB, com coeficiente próximo a 1.</p>
-        <img src="df_corr_bar.png" alt="Correlação Individual">
-    </div>
+<div class="grafico">
+    <h2>2. Existe relação entre o número de matrículas privadas e o PIB estadual?</h2>
+    <p>Sim. Estados com maior PIB, como São Paulo e Rio de Janeiro, concentram também o maior número de matrículas privadas, como visto no gráfico abaixo.</p>
+    <img src="graf_pergunta_2.png" alt="Relação entre Matrículas Privadas e PIB">
+</div>
 
-    <footer>
-        <p><strong>Dados:</strong> INEP (Censo Escolar 2021) e IBGE (PIB Estadual).</p>
-    </footer>
+<div class="grafico">
+    <h2>3. Qual é a força dessa relação estatisticamente?</h2>
+    <p>O coeficiente de correlação entre matrículas privadas e PIB estadual é 0.98, indicando uma forte associação linear positiva entre as duas variáveis.</p>
+    <img src="df_corr_bar.png" alt="Correlação Individual com PIB">
+</div>
+
+<div class="grafico">
+    <h2>4. Essa relação é estatisticamente significativa?</h2>
+    <p>Sim. A regressão linear simples mostra que 95,7% da variação do PIB estadual pode ser explicada pelo número de matrículas privadas. O modelo é altamente significativo.</p>
+    <img src="df_corr_bar.png" alt="Regressão Linear Explicando o PIB">
+</div>
+
+<div class="grafico">
+    <h2>5. Como outras redes de ensino se correlacionam com o PIB?</h2>
+    <p>O mapa de correlação mostra que as redes públicas têm correlações menores com o PIB, ao passo que a rede privada apresenta a maior correlação. A visualização individual confirma essa hierarquia.</p>
+    <img src="graf_pergunta_5.png" alt="Mapa de Correlação entre Variáveis">
+    <img src="graf_pergunta_5_2.png" alt="Correlação por Tipo de Rede">
+</div>
+
+<footer>
+    <p><strong>Fonte:</strong> Censo Escolar (INEP) e Contas Regionais (IBGE), 2021.</p>
+</footer>
+
 </body>
 </html>
